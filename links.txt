@@ -32,9 +32,19 @@
 # Favourites
 // *Example | https://example.com/your-referral-link | Short description of the offer | YOURCODE
 
-# Crypto & Finance
+# Crypto
+ Kraken | https://invite.kraken.com/JDNW/a5wo3w9q | Get up to $45-$350 as a random bonus once you deposit and trade $200 | p8gb757w
+ BingX | https://bingxdao.com/referral-program/QSSJHN?activityId=g_1567322053827448881 | Sign up on BingX to claim up to $10,800 in new user rewards now. T&Cs | https://kointrade.io/en/referral-program/rules?activityId=g_1567322053827448881&code=QSSJHN
+ ByBit | https://www.bybit.com/invite?ref=Y3ANG1X&medium=referral&utm_campaign=evergreen | Sign up, verify account and deposit $1+ to get $20 bonus| Y3ANG1X
+ Swyftx | https://trade.swyftx.com/register/?promoRef=rf_XWy9keUZRN4hz5P3VooHTj | Sign up $10 BTC bonus when deposit $1+ | XWy9keUZRN4hz5P3VooHTj
+ OKX | https://app.okx.com/en-au/join/DH5DJCAK | Sign up and receive $200 BTC. $2000 deposit or $10000 eligible tokens needed for bonus | DH5DJCAK
+ Block Earner | https://blockearner.com.au/referral/?kid=1XFRGK | $25 Bonus BTC Signup and make a transaction | 1XFRGK
+ Coinbase | https://coinbase.com/join/ABUHLRG?src=ios-link | $20 Bonus BTC signup and trade $20 to credit | 
 
 # Rewards
+
+
+# Finance
 
 # Shopping
 
