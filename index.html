@@ -273,10 +273,9 @@ const CONFIG = {
 
   // Categories appear in this order. Empty categories are hidden automatically.
   categories: [
-    { id: "crypto",  title: "Crypto exchanges", note: "" },
-    { id: "banking", title: "Banking & money",  note: "" },
-    { id: "apps",    title: "Apps & cashback",  note: "" },
-    { id: "other",   title: "Other",            note: "" }
+    { id: "rewards", title: "Rewards", note: "" },
+    { id: "payouts", title: "Payouts", note: "" },
+    { id: "other",   title: "Other",   note: "" }
   ],
 
   /* One object per offer:
@@ -289,11 +288,11 @@ const CONFIG = {
        highlight — true for one featured gradient card
   */
   offers: [
-    { label: "Exchange name",   url: "https://example.com/your-referral-link", category: "crypto",  perk: "Describe the sign-up bonus here", code: "YOURCODE", icon: "crypto", highlight: true },
-    { label: "Exchange name 2", url: "https://example.com/your-referral-link", category: "crypto",  perk: "Describe the sign-up bonus here", code: "",         icon: "chart" },
-    { label: "Bank name",       url: "https://example.com/your-referral-link", category: "banking", perk: "Describe the sign-up bonus here", code: "YOURCODE", icon: "bank" },
-    { label: "Card / wallet",   url: "https://example.com/your-referral-link", category: "banking", perk: "Describe the sign-up bonus here", code: "",         icon: "card" },
-    { label: "Cashback app",    url: "https://example.com/your-referral-link", category: "apps",    perk: "Describe the sign-up bonus here", code: "YOURCODE", icon: "gift" }
+    { label: "Rewards offer",   url: "https://example.com/your-referral-link", category: "rewards", perk: "Describe the sign-up bonus here", code: "YOURCODE", icon: "gift", highlight: true },
+    { label: "Rewards offer 2", url: "https://example.com/your-referral-link", category: "rewards", perk: "Describe the sign-up bonus here", code: "",         icon: "percent" },
+    { label: "Payout offer",    url: "https://example.com/your-referral-link", category: "payouts", perk: "Describe the sign-up bonus here", code: "YOURCODE", icon: "wallet" },
+    { label: "Payout offer 2",  url: "https://example.com/your-referral-link", category: "payouts", perk: "Describe the sign-up bonus here", code: "",         icon: "bank" },
+    { label: "Other offer",     url: "https://example.com/your-referral-link", category: "other",   perk: "Describe the sign-up bonus here", code: "",         icon: "link" }
   ],
 
   footer: "Bonuses, eligibility and terms are set by each provider and can change. Check before signing up.",
