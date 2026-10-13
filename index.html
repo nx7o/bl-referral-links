@@ -3,15 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Brett Lougher — referrals</title>
+<title>Brett L — links</title>
 <meta name="description" content="Referral codes and sign-up offers.">
-<meta property="og:title" content="Brett Lougher — referrals">
+<meta property="og:title" content="Brett L — links">
 <meta property="og:description" content="Referral codes and sign-up offers.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0e0e12">
 
 <style>
-  /* ========= THEME TOKENS (overridden from CONFIG.theme below) ========= */
   :root{
     --bg:        #0e0e12;
     --bg-2:      #16161d;
@@ -40,7 +39,6 @@
     padding: clamp(24px, 7vh, 72px) 16px calc(40px + env(safe-area-inset-bottom));
     overflow-x: hidden;
   }
-
   body::before{
     content:"";
     position: fixed;
@@ -55,21 +53,13 @@
   @keyframes drift{ to{ transform: translate3d(-3%, 2%, 0) scale(1.08); } }
 
   .wrap{
-    width: 100%;
-    max-width: var(--maxw);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
+    width: 100%; max-width: var(--maxw);
+    display: flex; flex-direction: column; align-items: center; gap: 18px;
   }
 
-  /* ---- profile ---- */
   .avatar{
-    width: 92px; height: 92px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--border);
-    background: var(--bg-2);
+    width: 92px; height: 92px; border-radius: 50%;
+    object-fit: cover; border: 2px solid var(--border); background: var(--bg-2);
     display: grid; place-items: center;
     font-size: 34px; font-weight: 700; color: var(--text);
     box-shadow: 0 8px 30px rgba(0,0,0,.35);
@@ -80,123 +70,80 @@
   .handle a:hover{ color: var(--text); }
   .bio{ color: var(--muted); font-size: 15px; text-align: center; max-width: 38ch; margin: 0; }
 
-  /* ---- disclosure ---- */
   .notice{
-    width: 100%;
-    display: flex; gap: 10px; align-items: flex-start;
-    padding: 12px 14px;
-    border-radius: 12px;
+    width: 100%; display: flex; gap: 10px; align-items: flex-start;
+    padding: 12px 14px; border-radius: 12px;
     background: color-mix(in srgb, var(--accent-2) 8%, transparent);
     border: 1px solid color-mix(in srgb, var(--accent-2) 28%, var(--border));
-    color: var(--muted);
-    font-size: 13px; line-height: 1.45;
+    color: var(--muted); font-size: 13px; line-height: 1.45;
   }
   .notice svg{ flex: 0 0 16px; width:16px; height:16px; margin-top: 2px; color: var(--accent-2); }
   .notice b{ color: var(--text); font-weight: 600; }
 
-  /* ---- category filter ---- */
   .tabs{
-    width: 100%;
-    display: flex; gap: 8px;
-    overflow-x: auto; scrollbar-width: none;
-    padding: 2px;
-    margin-top: 2px;
+    width: 100%; display: flex; gap: 8px;
+    overflow-x: auto; scrollbar-width: none; padding: 2px; margin-top: 2px;
   }
   .tabs::-webkit-scrollbar{ display:none; }
   .tab{
-    flex: 0 0 auto;
-    font: inherit; font-size: 13px; font-weight: 600;
-    color: var(--muted);
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    padding: 7px 14px;
-    cursor: pointer;
-    transition: background .15s ease, color .15s ease, border-color .15s ease;
+    flex: 0 0 auto; font: inherit; font-size: 13px; font-weight: 600;
+    color: var(--muted); background: var(--card);
+    border: 1px solid var(--border); border-radius: 999px;
+    padding: 7px 14px; cursor: pointer;
+    transition: background .15s ease, color .15s ease;
   }
   .tab:hover{ color: var(--text); background: var(--card-hov); }
   .tab[aria-pressed="true"]{
-    color: #111;
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    border-color: transparent;
+    color: #111; background: linear-gradient(135deg, var(--accent), var(--accent-2)); border-color: transparent;
   }
 
-  /* ---- sections ---- */
   .section{ width: 100%; display:flex; flex-direction: column; gap: 10px; }
   .section[hidden]{ display:none; }
-  .sec-head{
-    display:flex; align-items: baseline; justify-content: space-between;
-    margin: 10px 2px 0;
-  }
   .sec-title{
     font-size: 12px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase;
-    color: var(--muted); margin: 0;
+    color: var(--muted); margin: 10px 2px 0;
   }
-  .sec-note{ font-size: 12px; color: var(--muted); opacity: .8; }
 
-  /* ---- offer cards ---- */
   .offer{
-    position: relative;
-    display: flex; align-items: stretch;
-    width: 100%;
-    border-radius: var(--radius);
-    background: var(--card);
-    border: 1px solid var(--border);
+    position: relative; display: flex; align-items: stretch; width: 100%;
+    border-radius: var(--radius); background: var(--card); border: 1px solid var(--border);
     transition: transform .15s ease, background .15s ease, border-color .15s ease, box-shadow .15s ease;
     overflow: hidden;
   }
   .offer:hover{
-    background: var(--card-hov);
-    transform: translateY(-2px);
+    background: var(--card-hov); transform: translateY(-2px);
     border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
     box-shadow: 0 10px 24px rgba(0,0,0,.28);
   }
   .offer .go{
-    flex: 1; min-width: 0;
-    display: flex; align-items: center; gap: 14px;
-    padding: 14px 16px;
-    color: var(--text); text-decoration: none;
+    flex: 1; min-width: 0; display: flex; align-items: center; gap: 14px;
+    padding: 14px 16px; color: var(--text); text-decoration: none;
   }
   .ico{
-    flex: 0 0 38px; width: 38px; height: 38px;
-    display:grid; place-items:center;
-    border-radius: 10px;
-    background: rgba(255,255,255,.06);
-    color: var(--muted);
-    font-weight: 700; font-size: 15px;
+    flex: 0 0 38px; width: 38px; height: 38px; display:grid; place-items:center;
+    border-radius: 10px; background: rgba(255,255,255,.06); color: var(--muted);
     transition: color .15s ease;
   }
   .ico svg{ width: 20px; height: 20px; }
   .offer:hover .ico{ color: var(--accent); }
   .txt{ min-width: 0; display:flex; flex-direction: column; }
-  .label{ font-weight: 600; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .label{ font-weight: 600; font-size: 15px; overflow-wrap: anywhere; }
   .perk{ font-size: 13px; color: var(--muted); line-height: 1.35; margin-top: 1px; }
   .chev{ margin-left: auto; flex: 0 0 auto; color: var(--muted); opacity: .5; transition: .15s ease; font-size: 18px; }
   .offer:hover .chev{ opacity: .9; transform: translateX(2px); }
 
-  /* referral code copy button (sibling of the link, never nested) */
   .code{
-    flex: 0 0 auto;
-    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px;
-    min-width: 84px;
-    padding: 8px 12px;
-    font: inherit;
-    color: var(--text);
-    background: rgba(255,255,255,.03);
-    border: 0; border-left: 1px dashed var(--border);
-    cursor: pointer;
-    transition: background .15s ease;
+    flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px;
+    min-width: 84px; padding: 8px 12px; font: inherit; color: var(--text);
+    background: rgba(255,255,255,.03); border: 0; border-left: 1px dashed var(--border);
+    cursor: pointer; transition: background .15s ease;
   }
   .code:hover{ background: rgba(255,255,255,.08); }
   .code .k{ font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
   .code .v{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; font-weight: 700; max-width: 11ch; overflow:hidden; text-overflow: ellipsis; white-space: nowrap; }
   .code.copied .k{ color: var(--accent-2); }
 
-  /* featured */
-  .offer.highlight{
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    border-color: transparent;
-  }
+  .offer.highlight{ background: linear-gradient(135deg, var(--accent), var(--accent-2)); border-color: transparent; }
   .offer.highlight .go, .offer.highlight .perk, .offer.highlight .chev,
   .offer.highlight .ico, .offer.highlight:hover .ico, .offer.highlight .code, .offer.highlight .code .k{ color:#111; }
   .offer.highlight .ico{ background: rgba(0,0,0,.10); }
@@ -205,32 +152,36 @@
   .offer.highlight::after{
     content:""; position:absolute; top:0; left:-60%; width:40%; height:100%;
     background: linear-gradient(120deg, transparent, rgba(255,255,255,.45), transparent);
-    transform: skewX(-20deg);
-    transition: left .5s ease;
-    pointer-events: none;
+    transform: skewX(-20deg); transition: left .5s ease; pointer-events: none;
   }
   .offer.highlight:hover::after{ left:120%; }
 
   .empty{ color: var(--muted); font-size: 14px; text-align:center; padding: 18px 0; }
 
-  footer{ margin-top: 14px; color: var(--muted); font-size: 12px; text-align:center; line-height: 1.6; max-width: 46ch; }
-  footer a{ color: var(--muted); }
+  /* problems panel — only appears when the page is opened with ?check */
+  .check{
+    width: 100%; border-radius: 12px; padding: 12px 14px; font-size: 13px; line-height: 1.5;
+    background: rgba(255,255,255,.05); border: 1px solid var(--border); color: var(--text);
+  }
+  .check.bad{ border-color: #ff6a5e; }
+  .check.good{ border-color: #6bd68a; }
+  .check h2{ margin: 0 0 6px; font-size: 14px; }
+  .check ul{ margin: 6px 0 0; padding-left: 18px; color: var(--muted); }
+  .check code{ font-family: ui-monospace, Menlo, monospace; color: var(--text); overflow-wrap: anywhere; }
 
-  /* toast */
+  footer{ margin-top: 14px; color: var(--muted); font-size: 12px; text-align:center; line-height: 1.6; max-width: 46ch; }
+
   .toast{
     position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom));
     transform: translate(-50%, 20px); opacity: 0;
-    background: var(--bg-2); color: var(--text);
-    border: 1px solid var(--border); border-radius: 999px;
-    padding: 9px 16px; font-size: 13px; font-weight: 600;
-    box-shadow: 0 10px 30px rgba(0,0,0,.4);
+    background: var(--bg-2); color: var(--text); border: 1px solid var(--border); border-radius: 999px;
+    padding: 9px 16px; font-size: 13px; font-weight: 600; box-shadow: 0 10px 30px rgba(0,0,0,.4);
     transition: .2s ease; pointer-events: none;
   }
   .toast.show{ transform: translate(-50%, 0); opacity: 1; }
 
   .reveal{ opacity:0; transform: translateY(10px); animation: rise .5s ease forwards; }
   @keyframes rise{ to{ opacity:1; transform:none; } }
-
   :focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
 
   @media (max-width: 380px){
@@ -244,195 +195,181 @@
 </style>
 </head>
 <body>
-  <main class="wrap" id="app"></main>
+  <main class="wrap" id="app"><p class="empty">Loading…</p></main>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 /* ============================================================
-   EDIT EVERYTHING IN THIS BLOCK — nothing else needs touching.
-   Commit + push and the page updates in ~1 minute.
+   You should not need to edit this file to add links.
+   Add links in  links.txt  — see the instructions at the top of that file.
+   This block is only for your name, bio and the disclosure text.
    ============================================================ */
 const CONFIG = {
   name:   "Brett L",
   handle: "@blougher_",
   handleUrl: "https://nx7o.github.io/bl-link-in-bio/",   // where the handle links to ("" = no link)
   bio:    "Referral codes and sign-up offers.",
-
-  avatar: "",                       // direct image URL, or "" for initials
-
-  theme: {
-    bg:      "#0e0e12",
-    accent:  "#ff6a5e",
-    accent2: "#ffd166",
-    text:    "#f3f3f5",
-    muted:   "#9aa0ab"
-  },
-
-  // Shown at the top. Keep it — affiliate disclosure is expected by the ACCC and most platforms.
+  avatar: "",                                            // direct image URL, or "" for initials
+  theme: { bg:"#0e0e12", accent:"#ff6a5e", accent2:"#ffd166", text:"#f3f3f5", muted:"#9aa0ab" },
   disclosure: "Some links below are <b>referral links</b>. If you sign up, I may get a reward and you may get a bonus. Not financial advice — read each provider's terms first.",
-
-  // Categories appear in this order. Empty categories are hidden automatically.
-  categories: [
-    { id: "rewards", title: "Crypto", note: "" },
-    { id: "rewards", title: "Banks", note: "" },
-    { id: "rewards", title: "Casinos", note: "" },
-    { id: "payouts", title: "Payouts", note: "" },
-    { id: "other",   title: "Other",   note: "" }
-  ],
-
-  /* One object per offer:
-       label     — provider name (required)
-       url       — your referral link (required; offers without a url are hidden)
-       category  — one of the ids above
-       perk      — short line about the bonus, e.g. "Get $10 when you deposit $100"
-       code      — referral code people can tap to copy ("" to hide)
-       icon      — key from ICONS below, OR leave out to show the first letter
-       highlight — true for one featured gradient card
-  */
-  offers: [
-    { label: "Rewards offer",   url: "https://example.com/your-referral-link", category: "rewards", perk: "Describe the sign-up bonus here", code: "YOURCODE", icon: "gift", highlight: true },
-    { label: "Rewards offer 2", url: "https://example.com/your-referral-link", category: "rewards", perk: "Describe the sign-up bonus here", code: "",         icon: "percent" },
-    { label: "Payout offer",    url: "https://example.com/your-referral-link", category: "payouts", perk: "Describe the sign-up bonus here", code: "YOURCODE", icon: "wallet" },
-    { label: "Payout offer 2",  url: "https://example.com/your-referral-link", category: "payouts", perk: "Describe the sign-up bonus here", code: "",         icon: "bank" },
-    { label: "Other offer",     url: "https://example.com/your-referral-link", category: "other",   perk: "Describe the sign-up bonus here", code: "",         icon: "link" }
-  ],
-
-  footer: "Bonuses, eligibility and terms are set by each provider and can change. Check before signing up.",
-  lastUpdated: "October 2026"       // "" to hide
+  footer: "Bonuses, eligibility and terms are set by each provider and can change. Check before signing up."
 };
 
-/* ---- Inline SVG icons. Add your own as key: '<svg ...>' ---- */
-const ICONS = {
-  crypto: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7h5.5a2.5 2.5 0 0 1 0 5H9zm0 5h6.5a2.5 2.5 0 0 1 0 5H9zM9 5v14M11 5V3m0 18v-2m3-14V3m0 18v-2"/></svg>',
-  chart:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></svg>',
-  bank:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10 12 4l9 6"/><path d="M5 10v8m4-8v8m6-8v8m4-8v8M3 21h18"/></svg>',
-  card:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg>',
-  wallet: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4"/><path d="M21 11h-5a2 2 0 0 0 0 4h5z"/></svg>',
-  gift:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M5 12v9h14v-9M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg>',
-  percent:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 5 5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>',
-  link:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1.5-1.5"/></svg>'
+/* Icons are picked automatically from the section name. */
+const ICON = {
+  star:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>',
+  chart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></svg>',
+  gift:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M5 12v9h14v-9M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg>',
+  bag:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>',
+  link:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1.5-1.5"/></svg>'
 };
 const INFO_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>';
+const iconFor = title => {
+  const t = title.toLowerCase();
+  if (/fav|star|top|best/.test(t))            return ICON.star;
+  if (/crypto|financ|bank|invest|trad/.test(t)) return ICON.chart;
+  if (/reward|cash|bonus|point/.test(t))      return ICON.gift;
+  if (/shop|store|deal/.test(t))              return ICON.bag;
+  return ICON.link;
+};
 
-/* ===================== render (no need to edit below) ===================== */
-(function render(){
+/* ---------- read links.txt ----------
+   # Section name
+   Name | link | what you get | code        (only Name and link are required)
+   *Name | link ...                          (a * in front = big highlighted card)
+   // anything after two slashes is ignored */
+function parse(text){
+  const sections = [], problems = [];
+  let cur = null;
+  text.replace(/^\uFEFF/, '').split(/\r?\n/).forEach((raw, idx) => {
+    const line = raw.trim();
+    if (!line || line.startsWith('//')) return;
+    const where = `line ${idx+1}`;
+    if (line.startsWith('#')) {
+      const title = line.replace(/^#+\s*/, '').trim();
+      if (!title) { problems.push({ where, line, why: 'Section heading has no name' }); return; }
+      cur = { title, items: [] }; sections.push(cur); return;
+    }
+    if (!cur) { problems.push({ where, line, why: 'This link is above the first # section heading' }); return; }
+    const p = line.split('|').map(s => s.trim());
+    let name = p[0] || '', url = p[1] || '';
+    const perk = p[2] || '', code = p[3] || '';
+    let featured = false;
+    if (name.startsWith('*')) { featured = true; name = name.slice(1).trim(); }
+    if (!name)  { problems.push({ where, line, why: 'Missing the name' }); return; }
+    if (!url)   { problems.push({ where, line, why: 'Missing the link — format is  Name | link | what you get | code' }); return; }
+    if (!/^https?:\/\//i.test(url)) {
+      if (/^[^\s\/:|]+\.[^\s|]+$/.test(url)) url = 'https://' + url;
+      else { problems.push({ where, line, why: 'The link does not look like a web address (it should start with https://)' }); return; }
+    }
+    cur.items.push({ name, url, perk, code, featured });
+  });
+  return { sections: sections.filter(s => s.items.length), problems };
+}
+
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const safeUrl = u => /^https?:\/\//i.test(String(u||'').trim()) ? String(u).trim() : '';
+
+function render(data, updated){
   const t = CONFIG.theme || {};
   const root = document.documentElement.style;
-  if (t.bg)      root.setProperty('--bg', t.bg);
-  if (t.text)    root.setProperty('--text', t.text);
-  if (t.muted)   root.setProperty('--muted', t.muted);
-  if (t.accent)  root.setProperty('--accent', t.accent);
+  if (t.bg) root.setProperty('--bg', t.bg);
+  if (t.text) root.setProperty('--text', t.text);
+  if (t.muted) root.setProperty('--muted', t.muted);
+  if (t.accent) root.setProperty('--accent', t.accent);
   if (t.accent2) root.setProperty('--accent-2', t.accent2);
 
-  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const safeUrl = u => /^https?:\/\//i.test(String(u||'').trim()) ? String(u).trim() : '';
   const initials = (CONFIG.name||'?').trim().split(/\s+/).slice(0,2).map(w=>w[0]).join('').toUpperCase();
-
   let i = 0;
   const delay = () => `style="animation-delay:${Math.min(i++ * 50, 900)}ms"`;
-  const app = document.getElementById('app');
 
   const avatarEl = CONFIG.avatar
     ? `<img class="avatar reveal" ${delay()} src="${esc(CONFIG.avatar)}" alt="${esc(CONFIG.name)}" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'avatar',textContent:'${esc(initials)}'}))">`
     : `<div class="avatar reveal" ${delay()} aria-hidden="true">${esc(initials)}</div>`;
 
-  const offers = (CONFIG.offers||[]).filter(o => o && o.label && safeUrl(o.url));
-  const cats = (CONFIG.categories||[]).filter(c => offers.some(o => o.category === c.id));
-  // offers with an unknown category fall into a catch-all
-  const orphans = offers.filter(o => !cats.some(c => c.id === o.category));
-  if (orphans.length) cats.push({ id: '__more', title: 'More', note: '' });
+  const card = (o, ico) => `
+    <div class="offer ${o.featured?'highlight':''} reveal" ${delay()}>
+      <a class="go" href="${esc(safeUrl(o.url))}" target="_blank" rel="noopener noreferrer sponsored">
+        <span class="ico" aria-hidden="true">${ico}</span>
+        <span class="txt"><span class="label">${esc(o.name)}</span>${o.perk ? `<span class="perk">${esc(o.perk)}</span>` : ''}</span>
+        <span class="chev" aria-hidden="true">›</span>
+      </a>${o.code ? `<button class="code" type="button" data-code="${esc(o.code)}" aria-label="Copy referral code ${esc(o.code)}"><span class="k">Code</span><span class="v">${esc(o.code)}</span></button>` : ''}
+    </div>`;
 
-  const card = o => {
-    const ico = o.icon && ICONS[o.icon] ? ICONS[o.icon] : esc((o.label||'?').trim()[0].toUpperCase());
-    const code = o.code ? `
-      <button class="code" type="button" data-code="${esc(o.code)}" aria-label="Copy referral code ${esc(o.code)}">
-        <span class="k">Code</span><span class="v">${esc(o.code)}</span>
-      </button>` : '';
-    return `
-      <div class="offer ${o.highlight?'highlight':''} reveal" ${delay()}>
-        <a class="go" href="${esc(safeUrl(o.url))}" target="_blank" rel="noopener noreferrer sponsored">
-          <span class="ico" aria-hidden="true">${ico}</span>
-          <span class="txt">
-            <span class="label">${esc(o.label)}</span>
-            ${o.perk ? `<span class="perk">${esc(o.perk)}</span>` : ''}
-          </span>
-          <span class="chev" aria-hidden="true">›</span>
-        </a>${code}
-      </div>`;
-  };
+  const secs = data.sections.map((s, n) => `
+    <section class="section" data-cat="${n}" aria-labelledby="h-${n}">
+      <h2 class="sec-title" id="h-${n}">${esc(s.title)}</h2>
+      ${s.items.map(o => card(o, iconFor(s.title))).join('')}
+    </section>`).join('');
 
-  const sections = cats.map(c => {
-    const items = c.id === '__more' ? orphans : offers.filter(o => o.category === c.id);
-    return `
-      <section class="section" data-cat="${esc(c.id)}" aria-labelledby="h-${esc(c.id)}">
-        <div class="sec-head">
-          <h2 class="sec-title" id="h-${esc(c.id)}">${esc(c.title)}</h2>
-          ${c.note ? `<span class="sec-note">${esc(c.note)}</span>` : ''}
-        </div>
-        ${items.map(card).join('')}
-      </section>`;
-  }).join('');
-
-  const tabs = cats.length > 1 ? `
-    <div class="tabs reveal" ${delay()} role="group" aria-label="Filter by category">
+  const tabs = data.sections.length > 1 ? `
+    <div class="tabs reveal" ${delay()} role="group" aria-label="Filter by section">
       <button class="tab" type="button" data-filter="all" aria-pressed="true">All</button>
-      ${cats.map(c => `<button class="tab" type="button" data-filter="${esc(c.id)}" aria-pressed="false">${esc(c.title)}</button>`).join('')}
+      ${data.sections.map((s, n) => `<button class="tab" type="button" data-filter="${n}" aria-pressed="false">${esc(s.title)}</button>`).join('')}
     </div>` : '';
 
   const handle = CONFIG.handle
     ? `<p class="handle">${safeUrl(CONFIG.handleUrl) ? `<a href="${esc(safeUrl(CONFIG.handleUrl))}">${esc(CONFIG.handle)}</a>` : esc(CONFIG.handle)}</p>` : '';
 
-  app.innerHTML = `
+  const checking = /[?&]check\b/.test(location.search);
+  const total = data.sections.reduce((n, s) => n + s.items.length, 0);
+  const checkBox = !checking ? '' : data.problems.length
+    ? `<div class="check bad"><h2>${data.problems.length} line${data.problems.length>1?'s':''} skipped</h2>These lines were ignored, so they are not on the page:<ul>${data.problems.map(p => `<li>${esc(p.where)}: ${esc(p.why)}<br><code>${esc(p.line)}</code></li>`).join('')}</ul></div>`
+    : `<div class="check good"><h2>All good</h2>${total} link${total===1?'':'s'} in ${data.sections.length} section${data.sections.length===1?'':'s'}, no problems found.</div>`;
+
+  document.getElementById('app').innerHTML = `
     ${avatarEl}
-    <div class="reveal" ${delay()} style="text-align:center">
-      <h1 class="name">${esc(CONFIG.name)}</h1>
-      ${handle}
-    </div>
+    <div class="reveal" ${delay()} style="text-align:center"><h1 class="name">${esc(CONFIG.name)}</h1>${handle}</div>
     ${CONFIG.bio ? `<p class="bio reveal" ${delay()}>${esc(CONFIG.bio)}</p>` : ''}
     ${CONFIG.disclosure ? `<div class="notice reveal" ${delay()} role="note">${INFO_ICON}<span>${CONFIG.disclosure}</span></div>` : ''}
+    ${checkBox}
     ${tabs}
-    ${sections || `<p class="empty">No offers yet.</p>`}
-    <footer class="reveal" ${delay()}>
-      ${CONFIG.footer ? `${esc(CONFIG.footer)}<br>` : ''}
-      ${CONFIG.lastUpdated ? `Last updated ${esc(CONFIG.lastUpdated)}` : ''}
-    </footer>
-  `;
+    ${secs || `<p class="empty">No links yet — check back soon.</p>`}
+    <footer class="reveal" ${delay()}>${CONFIG.footer ? esc(CONFIG.footer) : ''}${updated ? `<br>Updated ${esc(updated)}` : ''}</footer>`;
+}
 
-  /* filter tabs */
-  app.addEventListener('click', e => {
-    const tab = e.target.closest('.tab');
-    if (tab){
-      const f = tab.dataset.filter;
-      app.querySelectorAll('.tab').forEach(b => b.setAttribute('aria-pressed', String(b === tab)));
-      app.querySelectorAll('.section').forEach(s => { s.hidden = !(f === 'all' || s.dataset.cat === f); });
-      return;
+const app = document.getElementById('app');
+app.addEventListener('click', e => {
+  const tab = e.target.closest('.tab');
+  if (tab) {
+    const f = tab.dataset.filter;
+    app.querySelectorAll('.tab').forEach(b => b.setAttribute('aria-pressed', String(b === tab)));
+    app.querySelectorAll('.section').forEach(s => { s.hidden = !(f === 'all' || s.dataset.cat === f); });
+    return;
+  }
+  const btn = e.target.closest('.code');
+  if (btn) copy(btn);
+});
+
+const toast = document.getElementById('toast');
+let tId;
+function say(msg){
+  toast.textContent = msg; toast.classList.add('show');
+  clearTimeout(tId); tId = setTimeout(() => toast.classList.remove('show'), 1600);
+}
+async function copy(btn){
+  const code = btn.dataset.code;
+  try {
+    if (navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText(code);
+    else {
+      const ta = Object.assign(document.createElement('textarea'), { value: code });
+      ta.style.cssText = 'position:fixed;opacity:0'; document.body.appendChild(ta);
+      ta.select(); document.execCommand('copy'); ta.remove();
     }
-    const btn = e.target.closest('.code');
-    if (btn) copy(btn);
-  });
+    btn.classList.add('copied'); btn.querySelector('.k').textContent = 'Copied';
+    setTimeout(() => { btn.classList.remove('copied'); btn.querySelector('.k').textContent = 'Code'; }, 1600);
+    say(`Copied ${code}`);
+  } catch { say(`Code: ${code}`); }
+}
 
-  /* copy referral code */
-  const toast = document.getElementById('toast');
-  let tId;
-  function say(msg){
-    toast.textContent = msg; toast.classList.add('show');
-    clearTimeout(tId); tId = setTimeout(() => toast.classList.remove('show'), 1600);
-  }
-  async function copy(btn){
-    const code = btn.dataset.code;
-    try {
-      if (navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText(code);
-      else {
-        const ta = Object.assign(document.createElement('textarea'), { value: code });
-        ta.style.cssText = 'position:fixed;opacity:0'; document.body.appendChild(ta);
-        ta.select(); document.execCommand('copy'); ta.remove();
-      }
-      btn.classList.add('copied'); btn.querySelector('.k').textContent = 'Copied';
-      setTimeout(() => { btn.classList.remove('copied'); btn.querySelector('.k').textContent = 'Code'; }, 1600);
-      say(`Copied ${code}`);
-    } catch { say(`Code: ${code}`); }
-  }
-})();
+fetch('links.txt', { cache: 'no-cache' })
+  .then(r => { if (!r.ok) throw new Error(r.status); const lm = r.headers.get('last-modified'); return r.text().then(txt => [txt, lm]); })
+  .then(([txt, lm]) => {
+    let updated = '';
+    try { if (lm) updated = new Date(lm).toLocaleDateString('en-AU', { day:'numeric', month:'short', year:'numeric' }); } catch {}
+    render(parse(txt), updated);
+  })
+  .catch(() => { app.innerHTML = '<p class="empty">Could not load the links. Try refreshing.</p>'; });
 </script>
 </body>
 </html>

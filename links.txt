@@ -1,0 +1,41 @@
+// ============================================================
+//  YOUR LINKS LIVE HERE.  This is the only file you need to edit.
+// ============================================================
+//
+// HOW TO ADD A LINK
+//   1. Find the section you want. Section names are the lines that start with #
+//   2. Add a new line anywhere underneath it, written like this:
+//
+//        Name | link | what you get | code
+//
+//      Example:
+//        Some Exchange | https://example.com/ref/abc | Get a bonus when you sign up | MYCODE
+//
+//   - Only the Name and the link are required.
+//   - To add a code but no description, leave the middle empty:
+//        Some Exchange | https://example.com/ref/abc | | MYCODE
+//   - The | symbol is on the iPhone keyboard: tap 123, then #+=
+//   - Put a * at the very start of the name for a big highlighted card:
+//        *Some Exchange | https://example.com/ref/abc | Get a bonus | MYCODE
+//
+// TO HIDE A LINK without deleting it, put // at the start of its line.
+// TO MOVE A LINK to another section, cut the line and paste it under that section.
+// A section with no links is hidden automatically.
+// Do not change the lines that start with # unless you want to rename a section.
+//
+// CHECK YOUR WORK after saving: wait about a minute, then open the page with
+//   ?check on the end of the address, like  https://nx7o.github.io/bl-referral-links/?check
+// It lists any line it could not read and tells you why.
+//
+// ============================================================
+
+# Favourites
+// *Example | https://example.com/your-referral-link | Short description of the offer | YOURCODE
+
+# Crypto & Finance
+
+# Rewards
+
+# Shopping
+
+# Other

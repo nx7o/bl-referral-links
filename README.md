@@ -1,9 +1,10 @@
 # bl-referral-links
 
-Single-file referral/affiliate link page. Same design system as `bl-link-in-bio`.
+Referral link page. Same look as `bl-link-in-bio`.
 
-**Edit:** open `index.html`, change the `CONFIG` block (offers, categories, disclosure). Offers without a valid `https://` url are hidden automatically. Commit and push — GitHub Pages redeploys in about a minute.
+**To add or change links, edit `links.txt` only.** The instructions are at the top of that file.
+One line per link: `Name | link | what you get | code`
 
-**Hosting:** Settings → Pages → Deploy from a branch → `main` / `(root)`.
+After saving, open the live page with `?check` on the end to see any line the page could not read.
 
-Links use `rel="sponsored"` and the page carries an affiliate disclosure. Keep both.
+Links carry `rel="sponsored"` and the page shows an affiliate disclosure. Keep both.
